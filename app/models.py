@@ -9,7 +9,7 @@ class Category(Base):
     
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String, nullable=False)
-    created_at = Column(TIMESTAMP(timezone=TIMESTAMP), nullable=False, server_default=text("now()"))
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text("now()"))
 
 
 class TaAlim(Base):
@@ -44,7 +44,7 @@ class Images(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     url = Column(String, nullable=False)
     caption = Column(String, nullable=False)
-    created_at = Column(TIMESTAMP(timezone=TIMESTAMP), nullable=False, server_default=text("now()"))
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text("now()"))
 
 
 class Users(Base):
